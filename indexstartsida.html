@@ -9,6 +9,8 @@
 <body>
     <header>
         <p>Bättre Webb</p>
+        <button class="Seminariebutton">Seminarier</button>
+        <button class="Biljettbutton">Biljetter</button>
     </header>
 
     <main>
@@ -16,33 +18,48 @@
             <h1>Välkommen till Bättre Webb-konferensen!</h1>
             <p>Tre dagar intressanta seminarier av kodprojekt och seminarier för vår kommande framtid.</p>
         </section>
-        <section class="seminarier">
-            <div class="blurb">
-                <div class="bild">
-                    <img>
+        <section id="seminarier">
+            <div class="datum">20e Oktober</div>
+                <div class="blurb">
+                    <div class="bild">
+                        <img>
+                    </div>
+                    <div class="beskrivning">
+                        <h3>
+                            Cohesive Stress Solutions 
+                        </h3>
+                        <p>
+                            Mental health management techniques for the burnt-out programmer
+                        </p>
+                    </div>
                 </div>
-                <div class="beskrivning">
-                    <h3>
-                        Cohesive Stress Solutions 
-                    </h3>
-                    <p>
-                        Mental health management techniques for the burnt-out programmer
-                    </p>
+                <div class="blurb">
+                    <div class="bild">
+                        <img>
+                    </div>
+                    <div class="beskrivning">
+                        <h3>
+                            Rage Against The Machine
+                        </h3>
+                        <p>
+                            All around the world, AI is raising hostility--but how can we work alongside it?
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="blurb">
-                <div class="bild">
-                    <img>
-                </div>
-                <div class="beskrivning">
-                    <h3>
-                        Rage Against The Machine
-                    </h3>
-                    <p>
-                        All around the world, AI is raising hostility--but how can we work alongside it?
-                    </p>
-                </div>
-            </div>
+            <div class="datum">21e Oktober</div>
+            <div class="datum">22e Oktober</div>
+        </section>
+        <section>
+            <p>Vänligen välj vilken biljettyp du föredrar.</p>
+            <label for="helgpass">Helgpass</label>
+            <input type="radio" id="helgpass" name="biljett" value="Helg">
+            <p>Dagspass:</p>
+            <label for="dagspass 20/10">20/10</label>
+            <input type="checkbox" id="Dagspass" name="biljett" value="20/10">
+            <label for="dagspass 21/10">21/10</label>
+            <input type="checkbox" id="Dagspass" name="biljett" value="21/10">
+            <label for="dagspass 22/10">22/10</label>
+            <input type="checkbox" id="Dagspass" name="biljett" value="22/10">
         </section>
     </main>
 

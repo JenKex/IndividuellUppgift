@@ -1,22 +1,62 @@
 :root{
     --bg-color: rgb(249, 245, 221);
+    --complement-color: rgb(250, 255, 184);
     --accent-color: rgb(220, 52, 52);
     --contrast-color: rgb(43, 39, 39);
 }
 
 body{
     background-color: var(--bg-color);
+    padding: 0;
+    margin: 0;
 }
 
 header{
+    display: flex;
     position: sticky;
-    background-color: var(--bg-color);
-    
+    background-color: var(--complement-color);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    gap: 1em;
 }
-.seminarier{
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 20vh;
+}
+
+.intro > h1, .intro > p{
+    text-align: center;
+}
+
+#seminarier{
+    display: flex;
+}
+#seminarier > .blurb{
+    margin-right: 1em;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--contrast-color);
+    color: rgb(213, 213, 213);
+    }
+ul{
+    list-style-type: none;
+}
+@media (min-width: 700px){
+    .seminarier{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+    }
+
 /* Har funderat på hur man ska göra för att ha 1/3 bildelement och 2/3 text i dessa individuella småblurbs.
 Kanske ha själva strukturen uppsatt som grid, och sedan flex-element med en grow/shrink i varje blurb-box?*/
 
@@ -35,11 +75,4 @@ Kanske ha själva strukturen uppsatt som grid, och sedan flex-element med en gro
 .beskrivning{
     grid-row: span 2;
 }
-footer{
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background-color: var(--contrast-color);
 }
