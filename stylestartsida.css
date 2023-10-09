@@ -1,0 +1,45 @@
+:root{
+    --bg-color: rgb(249, 245, 221);
+    --accent-color: rgb(220, 52, 52);
+    --contrast-color: rgb(43, 39, 39);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+header{
+    position: sticky;
+    background-color: var(--bg-color);
+    
+}
+.seminarier{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Har funderat på hur man ska göra för att ha 1/3 bildelement och 2/3 text i dessa individuella småblurbs.
+Kanske ha själva strukturen uppsatt som grid, och sedan flex-element med en grow/shrink i varje blurb-box?*/
+
+.blurb{
+    background-color: white;
+    width: 20em;
+    height: 20em;
+    gap: 1em;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.bild{
+    grid-row: span 1;
+}
+.beskrivning{
+    grid-row: span 2;
+}
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--contrast-color);
+}
