@@ -1,3 +1,12 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
 :root{
     --bg-color: rgb(249, 245, 221);
     --complement-color: rgb(250, 255, 184);
@@ -17,34 +26,55 @@ header{
     background-color: var(--complement-color);
     top: 0;
     left: 0;
-    width: 100vw;
     gap: 1em;
+    padding: 1em;
 }
 
-.intro{
+.bakgrundsbildmobile{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 20vh;
+    justify-content: center;
+    background-image: url("https://miro.medium.com/v2/resize:fit:1200/1*5akpxEAq4fjVmd5pDtqDig.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
 }
 
-.intro > h1, .intro > p{
+.intro > .bakgrundsbildmobile > h1, .intro > .bakgrundsbildmobile > p{
     text-align: center;
+    color: var(--complement-color);
 }
 
 #seminarier{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+    align-items: center;
 }
 #seminarier > .blurb{
-    margin-right: 1em;
+    background-color: whitesmoke;
+    margin-bottom: 1em;
+    width: 80vw;
+    height: 30vh;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+.datum{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: var(--accent-color);
 }
 
 footer{
     display: flex;
-    position: fixed;
+    padding: 1em;
     bottom: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
     background-color: var(--contrast-color);
     color: rgb(213, 213, 213);
     }
@@ -52,7 +82,7 @@ ul{
     list-style-type: none;
 }
 @media (min-width: 700px){
-    .seminarier{
+    #seminarier{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     }
