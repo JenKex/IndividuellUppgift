@@ -25,9 +25,77 @@ header{
     position: sticky;
     background-color: var(--complement-color);
     top: 0;
-    left: 0;
     gap: 1em;
     padding: 1em;
+    width: 100%;
+}
+.nav{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    overflow: hidden;
+    background-color: var(--complement-color);
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.menu a{
+    display: block;
+    padding: 3em;
+    color: var(--accent-color);
+}
+
+.menu a:hover{
+    background-color: rgb(207, 164, 57);
+}
+
+.hamb{
+    cursor: pointer;
+    float: right;
+}
+.hamb-line{
+    background: var(--contrast-color);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before, .hamb-line::after{
+    background: var(--contrast-color);
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all .2s ease-out;
+    height: 100%;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu{
+    display: none;
+}
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line{
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }
 
 .bakgrundsbildmobile{
@@ -47,7 +115,7 @@ header{
 
 #seminarier{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin-top: 2em;
     align-items: center;
@@ -55,7 +123,8 @@ header{
 #seminarier > .blurb{
     background-color: whitesmoke;
     margin-bottom: 1em;
-    width: 80vw;
+    width: 60vw;
+    max-width: 65vw;
     height: 30vh;
     border-radius: 1em;
     box-shadow: 2px 2px 2px 2px;

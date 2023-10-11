@@ -1,13 +1,28 @@
+<!DOCTYPE html>
 
-<section id="biljetter">
-    <p>Vänligen välj vilken biljettyp du föredrar.</p>
-    <label for="helgpass">Helgpass</label>
-    <input type="radio" id="helgpass" name="biljett" value="Helg">
-    <p>Dagspass:</p>
-    <label for="dagspass 20/10">20/10</label>
-    <input type="checkbox" id="Dagspass" name="biljett" value="20/10">
-    <label for="dagspass 21/10">21/10</label>
-    <input type="checkbox" id="Dagspass" name="biljett" value="21/10">
-    <label for="dagspass 22/10">22/10</label>
-    <input type="checkbox" id="Dagspass" name="biljett" value="22/10">
-</section>
+<link rel="stylesheet" href="styleinput.css">
+
+<body>
+    <section id="biljetter">
+        <div class="biljettbox">
+            <div class="biljettprompt"><p><label for="biljettval">Vänligen välj vilken biljettyp du föredrar.</p></div>
+            <div>
+                <label for="helgpass">Helgpass</label>
+                <input type="radio" id="helgpass" name="biljett" value="Helg">
+            </label>
+            </div>
+            <div class="dagsbiljetter">
+            <p>Dagspass:</p>
+                <label for="dagspass 20/10">20/10
+                    <input type="checkbox" id="Dagspass" name="biljett" value="20/10">
+                </label>
+                <label for="dagspass 21/10">21/10
+                    <input type="checkbox" id="Dagspass" name="biljett" value="21/10">
+                </label>
+                <label for="dagspass 22/10">22/10
+                    <input type="checkbox" id="Dagspass" name="biljett" value="22/10">
+                </label>
+            </div>
+        </div>
+    </section>
+</body>
