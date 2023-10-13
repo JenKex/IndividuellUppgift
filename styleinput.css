@@ -5,10 +5,11 @@ body{
 .biljettbox{
     background-color: rgb(121, 112, 179);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    width: 50vw;
-    height: 70vh;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex;
+    flex-direction: column;*/
+    max-width: 70vw;
+    max-height: 70vh;
     margin: auto;
     position: absolute;
     top: 0;
@@ -16,16 +17,36 @@ body{
     left: 0;
     right: 0;
     border-radius: 2em;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+label{
+    padding: 5px;
 }
 
-.biljettbox div{
-    margin: auto;
-}
-.dagsbiljetter{
-    display: grid;
-    grid-template-columns: 1fr;
-}
 .biljettprompt{
+    margin: 0.5em;
+}
+
+.dagsbiljetter{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text]{
+    min-width: 0;
+    width: 100%;
+}
+
+.matval{
+    display: flex;
+    flex-direction: column;
+}
+
+.allergifråga{
     grid-column: span 2;
-    grid-row: 1;
+}
+.allergier{
+    width: 10em;
+    height: 5em;
 }

@@ -131,11 +131,16 @@ header{
     text-align: center;
 }
 
+.blurbcontent img{
+    max-width: 65vw;
+    height: 10vh;
+}
+
 .datum{
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
-    color: var(--accent-color);
+    color: var(--contrast-color);
 }
 
 footer{

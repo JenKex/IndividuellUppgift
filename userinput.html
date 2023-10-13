@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 <link rel="stylesheet" href="styleinput.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Urbanist:wght@500&display=swap" rel="stylesheet"> 
 
 <body>
     <section id="biljetter">
@@ -10,19 +13,50 @@
                 <label for="helgpass">Helgpass</label>
                 <input type="radio" id="helgpass" name="biljett" value="Helg">
             </label>
-            </div>
             <div class="dagsbiljetter">
             <p>Dagspass:</p>
                 <label for="dagspass 20/10">20/10
-                    <input type="checkbox" id="Dagspass" name="biljett" value="20/10">
+                    <input type="checkbox" id="dagspass 20/10" name="biljett" value="20/10">
                 </label>
                 <label for="dagspass 21/10">21/10
-                    <input type="checkbox" id="Dagspass" name="biljett" value="21/10">
+                    <input type="checkbox" id="dagspass 21/10" name="biljett" value="21/10">
                 </label>
                 <label for="dagspass 22/10">22/10
-                    <input type="checkbox" id="Dagspass" name="biljett" value="22/10">
+                    <input type="checkbox" id="dagspass 22/10" name="biljett" value="22/10">
                 </label>
             </div>
+            </div>
+            <label>
+                Förnamn:
+                <input type="text" name="Förnamn">
+            </label>
+            <label>
+                Efternamn:
+                <input type="text" name="Efternamn">
+            </label>
+            <label>
+                Adress:
+                <input type="text" name="Adress">
+            </label>
+            <label>
+                E-postaddress:
+                <input type="email" name="E-postadress">
+            </label>
+            <p>Välj vilken mat du föredrar.</p>
+            <div class="matval">
+                <label> Kött:
+                    <input type="radio" name="Matval">
+                </label>
+                <label> Fisk:
+                    <input type="radio" name="Matval">
+                </label>
+                <label> Vegetariskt:
+                    <input type="radio" name="Matval">
+                </label>
+            </div>
+            <label class="allergifråga"> Har du några andra allergier?
+                <input class="allergier" type="text" name="Anmäl allergier">
+            </label>
         </div>
     </section>
 </body>
