@@ -35,7 +35,11 @@ label{
 
 input[type=text]{
     min-width: 0;
-    width: 100%;
+    width: 95%;
+}
+input[type=email]{
+    min-width: 0;
+    width: 95%;
 }
 
 .matval{
@@ -49,4 +53,29 @@ input[type=text]{
 .allergier{
     width: 10em;
     height: 5em;
+}
+
+.submit{
+    grid-column: span 2;
+    justify-self: center;
+    background-color: rgb(200, 179, 201);
+    border-radius: 1em;
+    width: 5em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+.submit > a:link{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.submit > a:visited{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.submit > a:hover{
+    text-decoration: underline;
 }

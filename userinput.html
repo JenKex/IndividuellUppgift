@@ -8,55 +8,63 @@
 <body>
     <section id="biljetter">
         <div class="biljettbox">
-            <div class="biljettprompt"><p><label for="biljettval">Vänligen välj vilken biljettyp du föredrar.</p></div>
+            <div class="biljettprompt"><p><label for="biljettval">Please select your preferred type of ticket.</p></div>
             <div>
-                <label for="helgpass">Helgpass</label>
+            <label for="helgpass">
                 <input type="radio" id="helgpass" name="biljett" value="Helg">
+                Weekend pass
             </label>
             <div class="dagsbiljetter">
-            <p>Dagspass:</p>
-                <label for="dagspass 20/10">20/10
+            <p>Single-day tickets:</p>
+                <label for="dagspass 20/10">
                     <input type="checkbox" id="dagspass 20/10" name="biljett" value="20/10">
+                    20/10
                 </label>
-                <label for="dagspass 21/10">21/10
+                <label for="dagspass 21/10">
                     <input type="checkbox" id="dagspass 21/10" name="biljett" value="21/10">
+                    21/10
                 </label>
-                <label for="dagspass 22/10">22/10
+                <label for="dagspass 22/10">
                     <input type="checkbox" id="dagspass 22/10" name="biljett" value="22/10">
+                    22/10
                 </label>
             </div>
             </div>
             <label>
-                Förnamn:
+                Name:
                 <input type="text" name="Förnamn">
             </label>
             <label>
-                Efternamn:
+                Surname:
                 <input type="text" name="Efternamn">
             </label>
             <label>
-                Adress:
+                Address:
                 <input type="text" name="Adress">
             </label>
             <label>
-                E-postaddress:
+                E-mail:
                 <input type="email" name="E-postadress">
             </label>
-            <p>Välj vilken mat du föredrar.</p>
+            <p>Please select your preferred food.</p>
             <div class="matval">
-                <label> Kött:
+                <label>
                     <input type="radio" name="Matval">
+                    Meat
                 </label>
-                <label> Fisk:
+                <label>
                     <input type="radio" name="Matval">
+                    Fish
                 </label>
-                <label> Vegetariskt:
+                <label>
                     <input type="radio" name="Matval">
+                    Vegetarian
                 </label>
             </div>
-            <label class="allergifråga"> Har du några andra allergier?
+            <label class="allergifråga"> Do you have any other dietary requirements?
                 <input class="allergier" type="text" name="Anmäl allergier">
             </label>
+            <div class="submit"><a href="inputaccepted.html">Submit</a></div>
         </div>
     </section>
 </body>

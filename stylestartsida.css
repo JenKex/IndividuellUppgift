@@ -22,80 +22,40 @@ body{
 
 header{
     display: flex;
-    position: sticky;
-    background-color: var(--complement-color);
-    top: 0;
-    gap: 1em;
-    padding: 1em;
-    width: 100%;
-}
-.nav{
-    width: 100%;
-    height: 50%;
     position: fixed;
-    overflow: hidden;
-    background-color: var(--complement-color);
-    max-height: 0;
-    transition: max-height .5s ease-out;
+    padding: 1em;
+    width: 100vw;
+    background-color: var(--bg-color);
+    justify-content: space-between;
 }
 
-.menu a{
-    display: block;
-    padding: 3em;
+.logo{
+    font-family: "Orelega One";
+    font-size: 22px;
+}
+
+span{
     color: var(--accent-color);
 }
 
-.menu a:hover{
-    background-color: rgb(207, 164, 57);
+.linklist{
+    display: flex;
+    gap: 1.5em;
+    font-family: "Chivo";
 }
 
-.hamb{
-    cursor: pointer;
-    float: right;
-}
-.hamb-line{
-    background: var(--contrast-color);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-}
-.hamb-line::before, .hamb-line::after{
-    background: var(--contrast-color);
-    content: '';
-    display: block;
-    position: absolute;
-    transition: all .2s ease-out;
-    height: 100%;
-    width: 100%;
+.link > a:link{
+    text-decoration: none;
+    color: var(--accent-color);
 }
 
-.hamb-line::before{
-    top: 5px;
+.link > a:visited{
+    text-decoration: none;
+    color: var(--accent-color);
 }
 
-.hamb-line::after{
-    top: -5px;
-}
-
-.side-menu{
-    display: none;
-}
-
-.side-menu:checked ~ nav{
-    max-height: 100%;
-}
-.side-menu:checked ~ .hamb .hamb-line{
-    background: transparent;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
+.link > a:hover{
+    text-decoration: underline;
 }
 
 .bakgrundsbildmobile{
@@ -110,17 +70,17 @@ header{
 
 .intro > .bakgrundsbildmobile > h1, .intro > .bakgrundsbildmobile > p{
     text-align: center;
-    color: whitesmoke;
+    color: var(--complement-color);
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
 }
 
 .intro > .bakgrundsbildmobile > h1{
+    margin-top: 1em;
     font-family: "Orelega One";
-    font-size: 36px;
 }
 
 .intro > .bakgrundsbildmobile > p{
     font-family: "Urbanist";
-    font-size: 24px;
 }
 
 .seminarier1, .seminarier2, .seminarier3{
@@ -171,11 +131,36 @@ footer{
     right: 0;
     background-color: var(--contrast-color);
     color: rgb(213, 213, 213);
+    font-family: "Chivo";
+    justify-content: space-around;
     }
 ul{
     list-style-type: none;
 }
+ul > li > h4{
+    color: var(--accent-color);
+}
+.footer-col > ul > li{
+    color: var(--complement-color);
+}
+.footer-col > ul > a{
+    color: var(--complement-color);
+}
+
 @media (min-width: 700px){
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .intro > .bakgrundsbildmobile > h1{
+        font-size: 36px;
+    }
+    
+    .intro > .bakgrundsbildmobile > p{
+        font-size: 24px;
+    }
+
     .seminarier1 > .blurb, .seminarier2 > .blurb, .seminarier3 > .blurb{
         margin: 10px;
         min-width: 300px;

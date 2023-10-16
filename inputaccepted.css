@@ -1,0 +1,54 @@
+body{
+    background-color: darkslateblue;
+}
+
+.biljettbox{
+    background-color: rgb(121, 112, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vw;
+    max-height: 50vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1em;
+}
+
+.biljettbox > h2{
+    font-family: "Orelega One";
+    font-size: 30px;
+
+}
+
+.biljettbox > p{
+    font-family: Exo;
+    max-width: 25em;
+    text-align: center;
+}
+
+.link{
+    font-family: Exo;
+    background-color: rgb(200, 179, 201);
+    border-radius: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.link > a:link{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.link > a:visited{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.link > a:hover{
+    text-decoration: underline;
+}
