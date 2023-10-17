@@ -2,20 +2,94 @@ body{
     background-color: darkslateblue;
 }
 
+:root{
+    --bg-color: rgb(249, 245, 221);
+    --complement-color: rgb(250, 255, 184);
+    --accent-color: rgb(220, 52, 52);
+    --contrast-color: rgb(43, 39, 39);
+}
+
+header{
+    margin: -1em;
+    display: flex;
+    position: sticky;
+    background-color: var(--contrast-color);
+    top: 0;
+    padding: 1em;
+}
+
+nav{
+    position: absolute;
+    right: 0;
+}
+
+.menu-icon{
+    position: absolute;
+    right: 0;
+    margin-right: 2em;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.menu-navigation {
+    transform: scale(1, 1);
+}
+
+.menu-navigation {
+    flex-direction: column;
+    margin-top: 2em;
+    margin-right: 1em;
+    background-color: var(--complement-color);
+    transform: scale(1, 0);
+    transition: all 0.2s ease-in-out;
+    transform-origin: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+.menu-navigation > li{
+    font-family: "Exo";
+}
+
+.menu-navigation a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: rgb(121, 112, 179);
+    }
+
+.menu-navigation > li > a:link{
+    text-decoration: none;
+}
+
+.menu-navigation > li > a:visited{
+    text-decoration: none;
+}
+
+.logo{
+    font-family: "Orelega One";
+    font-size: 22px;
+    text-decoration: none;
+    color: rgb(121, 112, 179);
+}
+
 .biljettbox{
     background-color: rgb(121, 112, 179);
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* display: flex;
     flex-direction: column;*/
-    max-width: 70vw;
-    max-height: 70vh;
+    max-width: 90vw;
+    max-height: 75vh;
     margin: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    justify-content: center;
+    align-items: center;
     border-radius: 2em;
     font-family: "Open Sans";
     font-size: 14px;
@@ -42,7 +116,15 @@ input[type=email]{
     width: 95%;
 }
 
-.matval{
+input:invalid{
+    box-shadow: 1px 2px 2px 1px red;
+}
+
+.food-choice-prompt{
+    margin: 0.5em;
+}
+
+.food-choice{
     display: flex;
     flex-direction: column;
 }
@@ -51,8 +133,19 @@ input[type=email]{
     grid-column: span 2;
 }
 .allergier{
-    width: 10em;
+    width: 95%;
     height: 5em;
+}
+
+textarea{
+    font-family: Arial;
+    font-size: 14px;
+}
+
+textarea::placeholder {
+    font-family: Arial;
+    font-size: 14px;
+    color: #333;
 }
 
 .submit{
@@ -78,4 +171,48 @@ input[type=email]{
 
 .submit > a:hover{
     text-decoration: underline;
+}
+
+@media (min-width: 700px){
+
+    .logo{
+        font-size: 28px;
+    }
+
+    header{
+        margin-top: -1em;
+    }
+
+    nav{
+        position: absolute;
+        right: 0;
+    }
+    
+    .menu-icon{
+        display: none;
+    }
+
+    .menu-navigation {
+        display: flex;
+        margin-top: 0;
+        margin-right: 2em;
+        flex-direction: row;
+        background-color: var(--contrast-color);
+        /* align-items: flex-end; */
+        transform: scale(1, 1);
+        box-shadow: none;
+        }
+    nav > ul{
+        list-style: none;
+    }
+
+    .menu-navigation > li:hover{
+            text-decoration-line: underline;
+            text-decoration-color: rgb(121, 112, 179);
+        }
+
+    .biljettbox{
+        max-width: 50vw;
+        max-height: 80vh;
+    }
 }

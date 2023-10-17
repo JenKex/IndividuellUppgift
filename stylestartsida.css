@@ -22,40 +22,66 @@ body{
 
 header{
     display: flex;
-    position: fixed;
+    position: sticky;
+    background-color: var(--complement-color);
+    top: 0;
+    gap: 1em;
     padding: 1em;
-    width: 100vw;
-    background-color: var(--bg-color);
-    justify-content: space-between;
+}
+
+nav{
+    position: absolute;
+    right: 0;
+}
+
+.menu-icon{
+    position: absolute;
+    right: 0;
+    margin-right: 1em;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.menu-navigation {
+    transform: scale(1, 1);
+}
+
+.menu-navigation {
+    flex-direction: column;
+    margin-top: 2em;
+    background-color: var(--complement-color);
+    align-items: flex-end;
+    transform: scale(1, 0);
+    transition: all 0.2s ease-in-out;
+    transform-origin: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+.menu-navigation > li{
+    font-family: "Exo";
+}
+
+.menu-navigation a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color:rgb(220, 52, 52);
+    }
+
+.menu-navigation > li > a:link{
+    text-decoration: none;
+}
+
+.menu-navigation > li > a:visited{
+    text-decoration: none;
 }
 
 .logo{
     font-family: "Orelega One";
     font-size: 22px;
-}
-
-span{
-    color: var(--accent-color);
-}
-
-.linklist{
-    display: flex;
-    gap: 1.5em;
-    font-family: "Chivo";
-}
-
-.link > a:link{
     text-decoration: none;
-    color: var(--accent-color);
-}
-
-.link > a:visited{
-    text-decoration: none;
-    color: var(--accent-color);
-}
-
-.link > a:hover{
-    text-decoration: underline;
+    color: var(--contrast-color);
 }
 
 .bakgrundsbildmobile{
@@ -147,11 +173,43 @@ ul > li > h4{
     color: var(--complement-color);
 }
 
+@media (min-width: 500px){
+    .seminarier1 > .blurb, .seminarier2 > .blurb, .seminarier3 > .blurb{
+        margin: 10px;
+        width: 40vw;
+        height: 40vh;
+    }
+}
+
 @media (min-width: 700px){
 
     .logo{
         font-size: 28px;
     }
+
+    nav{
+        position: absolute;
+        right: 0;
+    }
+    
+    .menu-icon{
+        display: none;
+    }
+
+    .menu-navigation {
+        display: flex;
+        margin-top: 0;
+        flex-direction: row;
+        background-color: var(--complement-color);
+        /* align-items: flex-end; */
+        transform: scale(1, 1);
+        box-shadow: none;
+        }
+
+        .menu-navigation > li:hover{
+            text-decoration-line: underline;
+            color: var(--accent-color);
+        }
 
     .intro > .bakgrundsbildmobile > h1{
         font-size: 36px;
