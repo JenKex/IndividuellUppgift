@@ -1,5 +1,7 @@
 body{
     background-color: darkslateblue;
+    padding: 0;
+    margin: 0;
 }
 
 :root{
@@ -10,7 +12,6 @@ body{
 }
 
 header{
-    margin: -1em;
     display: flex;
     position: sticky;
     background-color: var(--contrast-color);
@@ -26,7 +27,7 @@ nav{
 .menu-icon{
     position: absolute;
     right: 0;
-    margin-right: 2em;
+    margin-right: 1em;
 }
 
 #menu-toggle {
@@ -40,12 +41,12 @@ nav{
 .menu-navigation {
     flex-direction: column;
     margin-top: 2em;
-    margin-right: 1em;
-    background-color: var(--complement-color);
+    background-color: var(--contrast-color);
     transform: scale(1, 0);
     transition: all 0.2s ease-in-out;
     transform-origin: top;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    list-style-type: none;
     }
 
 .menu-navigation > li{
@@ -74,7 +75,13 @@ nav{
     color: rgb(121, 112, 179);
 }
 
-.biljettbox{
+#tickets{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+}
+
+.ticketbox{
     background-color: rgb(121, 112, 179);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,11 +90,6 @@ nav{
     max-width: 90vw;
     max-height: 75vh;
     margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     justify-content: center;
     align-items: center;
     border-radius: 2em;
@@ -102,7 +104,7 @@ label{
     margin: 0.5em;
 }
 
-.dagsbiljetter{
+.ticket-types{
     display: flex;
     flex-direction: column;
 }
@@ -116,8 +118,12 @@ input[type=email]{
     width: 95%;
 }
 
-input:invalid{
-    box-shadow: 1px 2px 2px 1px red;
+input[type=text]:user-invalid, input[type=email]:user-invalid{
+    box-shadow: 1px 2px 6px 1px red;
+}
+
+input[type=radio]:user-invalid{
+    box-shadow: 1px 1px 6px 1px red;
 }
 
 .food-choice-prompt{
@@ -129,10 +135,10 @@ input:invalid{
     flex-direction: column;
 }
 
-.allergifråga{
+.allergy-question{
     grid-column: span 2;
 }
-.allergier{
+.allergies{
     width: 95%;
     height: 5em;
 }
@@ -152,11 +158,11 @@ textarea::placeholder {
     grid-column: span 2;
     justify-self: center;
     background-color: rgb(200, 179, 201);
-    border-radius: 1em;
+    border-radius: 0.5em;
     width: 5em;
     height: 2em;
-    line-height: 2em;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .submit > a:link{
@@ -172,6 +178,7 @@ textarea::placeholder {
 .submit > a:hover{
     text-decoration: underline;
 }
+
 
 @media (min-width: 700px){
 
@@ -195,7 +202,6 @@ textarea::placeholder {
     .menu-navigation {
         display: flex;
         margin-top: 0;
-        margin-right: 2em;
         flex-direction: row;
         background-color: var(--contrast-color);
         /* align-items: flex-end; */
@@ -210,9 +216,4 @@ textarea::placeholder {
             text-decoration-line: underline;
             text-decoration-color: rgb(121, 112, 179);
         }
-
-    .biljettbox{
-        max-width: 50vw;
-        max-height: 80vh;
-    }
 }

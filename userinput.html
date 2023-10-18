@@ -12,54 +12,54 @@
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul class="menu-navigation">
-                <li><a href="#seminarier">Seminars</a></li>
+                <li><a href="indexstartsida.html">Seminars</a></li>
                 <li><a href="userinput.html">Tickets</a></li>
             </ul>
         </nav>
     </header>
-    <section id="biljetter">
-        <form class="biljettbox">
+    <section id="tickets">
+        <form class="ticketbox" action="inputaccepted.html">
             <div class="biljettprompt"><p>Please select which days you'd like to attend.</p></div>
             <div>
-            <div class="dagsbiljetter">
-                <label for="dagspass 20/10">
-                    <input type="checkbox" id="dagspass 20/10" name="biljett" value="20/10">
+            <div class="ticket-types">
+                <label for="day pass for 20/10">
+                    <input type="checkbox" id="day pass for 20/10" name="ticket" value="20/10">
                     20/10
                 </label>
-                <label for="dagspass 21/10">
-                    <input type="checkbox" id="dagspass 21/10" name="biljett" value="21/10">
+                <label for="day pass for 21/10">
+                    <input type="checkbox" id="day pass for 21/10" name="ticket" value="21/10">
                     21/10
                 </label>
-                <label for="dagspass 22/10">
-                    <input type="checkbox" id="dagspass 22/10" name="biljett" value="22/10">
+                <label for="day pass for 22/10">
+                    <input type="checkbox" id="day pass for 22/10" name="ticket" value="22/10">
                     22/10
                 </label>
-                <label for="helgpass">
-                    <input type="checkbox" id="helgpass" name="biljett" value="Helg">
+                <label for="weekend pass">
+                    <input type="checkbox" id="weekend pass" name="ticket" value="Weekend">
                     Full weekend pass
                 </label>
             </div>
             </div>
-            <label>
+            <label for="Name">
                 Name:
-                <input type="text" name="Förnamn" placeholder="Sven" required>
+                <input type="text" id="Name" name="Name" placeholder="Sven" required>
             </label>
-            <label>
+            <label for="Surname">
                 Surname:
-                <input type="text" name="Efternamn" placeholder="Svenssòn" required>
+                <input type="text" id="Surname" name="Surname" placeholder="Svenssòn" required>
             </label>
-            <label>
+            <label for="Address">
                 Address:
-                <input type="text" name="Adress" placeholder="Cyborgliden 13" required>
+                <input type="text" id="Address" name="Address" placeholder="Cyborgliden 13" required>
             </label>
-            <label>
+            <label for="E-mail">
                 E-mail:
-                <input type="email" name="E-postadress" placeholder="s.svensson@outlook.com" required>
+                <input type="email" id="E-mail" name="E-mail" placeholder="s.svensson@outlook.com" required>
             </label>
             <p class="food-choice-prompt">Please select your preferred food.</p>
             <div class="food-choice">
                 <label for="food-choice">
-                    <input type="radio" id="food-choice" name="food-choice">
+                    <input type="radio" id="food-choice" name="food-choice" required>
                     Meat
                 </label>
                 <label>
@@ -71,11 +71,10 @@
                     Vegetarian
                 </label>
             </div>
-            <label for="allergies" class="allergifråga"> Do you have any dietary requirements?
-                <textarea class="allergier" id="allergies" name="Report dietary requirements" placeholder="I would like to inform you that..." rows="4" cols="40"></textarea>
+            <label for="allergies" class="allergy-question"> Do you have any dietary requirements?
+                <textarea class="allergies" id="allergies" name="Report dietary requirements" placeholder="I would like to inform you that..." rows="4" cols="40"></textarea>
             </label>
-            <button value="submit"></button>
-            <div class="submit"><a href="inputaccepted.html">Submit</a></div>
+            <button class="submit" value="submit">Submit</button>
         </div>
     </section>
 </body>
