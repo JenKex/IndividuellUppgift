@@ -1,11 +1,11 @@
 body{
-    background-color: darkslateblue;
+    background-color: var(--bg-color);
     padding: 0;
     margin: 0;
 }
 
 :root{
-    --bg-color: rgb(249, 245, 221);
+    --bg-color: rgb(225, 188, 78);
     --complement-color: rgb(250, 255, 184);
     --accent-color: rgb(220, 52, 52);
     --contrast-color: rgb(43, 39, 39);
@@ -14,7 +14,7 @@ body{
 header{
     display: flex;
     position: sticky;
-    background-color: var(--contrast-color);
+    background-color: var(--complement-color);
     top: 0;
     padding: 1em;
 }
@@ -41,7 +41,7 @@ nav{
 .menu-navigation {
     flex-direction: column;
     margin-top: 2em;
-    background-color: var(--contrast-color);
+    background-color: var(--complement-color);
     transform: scale(1, 0);
     transition: all 0.2s ease-in-out;
     transform-origin: top;
@@ -57,7 +57,7 @@ nav{
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: rgb(121, 112, 179);
+    color: var(--accent-color);
     }
 
 .menu-navigation > li > a:link{
@@ -72,7 +72,7 @@ nav{
     font-family: "Orelega One";
     font-size: 22px;
     text-decoration: none;
-    color: rgb(121, 112, 179);
+    color: var(--contrast-color);
 }
 
 #tickets{
@@ -82,20 +82,26 @@ nav{
 }
 
 .ticketbox{
-    background-color: rgb(121, 112, 179);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* display: flex;
-    flex-direction: column;*/
+    background-color: var(--complement-color);
+    display: flex;
+    flex-direction: column;
     max-width: 90vw;
-    max-height: 75vh;
     margin: auto;
-    justify-content: center;
-    align-items: center;
+    margin-top: 2em;
     border-radius: 2em;
     font-family: "Open Sans";
     font-size: 14px;
+    padding: 0.5em;
 }
+
+.ticketbox > *{
+    margin: 1em;
+}
+
+.ticketbox > p, .ticketbox > div > p{
+    margin: 1em;
+}
+
 label{
     padding: 5px;
 }
@@ -106,12 +112,19 @@ label{
 
 .ticket-types{
     display: flex;
-    flex-direction: column;
+}
+
+.textstart{
+    margin-top: 1em;
+}
+.textend{
+    margin-bottom: 1em;
 }
 
 input[type=text]{
     min-width: 0;
     width: 95%;
+    justify-content: flex-start;
 }
 input[type=email]{
     min-width: 0;
@@ -155,13 +168,12 @@ textarea::placeholder {
 }
 
 .submit{
-    grid-column: span 2;
-    justify-self: center;
     background-color: rgb(200, 179, 201);
     border-radius: 0.5em;
     width: 5em;
     height: 2em;
     text-align: center;
+    margin: auto;
     margin-bottom: 0.5em;
 }
 
@@ -179,15 +191,25 @@ textarea::placeholder {
     text-decoration: underline;
 }
 
+@media (min-width: 500px){
+    .ticketbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    }
+    .submit{
+        grid-column: span 2;
+        justify-self: center;    
+    }
+}
+
 
 @media (min-width: 700px){
 
     .logo{
         font-size: 28px;
-    }
-
-    header{
-        margin-top: -1em;
     }
 
     nav{
@@ -203,7 +225,7 @@ textarea::placeholder {
         display: flex;
         margin-top: 0;
         flex-direction: row;
-        background-color: var(--contrast-color);
+        background-color: var(--complement-color);
         /* align-items: flex-end; */
         transform: scale(1, 1);
         box-shadow: none;
@@ -214,6 +236,6 @@ textarea::placeholder {
 
     .menu-navigation > li:hover{
             text-decoration-line: underline;
-            text-decoration-color: rgb(121, 112, 179);
+            text-decoration-color: var(--accent-color);
         }
 }

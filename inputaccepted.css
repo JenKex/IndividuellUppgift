@@ -1,5 +1,12 @@
 body{
-    background-color: darkslateblue;
+    background-color: var(--bg-color);
+}
+
+:root{
+    --bg-color: rgb(225, 188, 78);
+    --complement-color: rgb(250, 255, 184);
+    --accent-color: rgb(220, 52, 52);
+    --contrast-color: rgb(43, 39, 39);
 }
 
 /* #biljetter{
@@ -9,7 +16,7 @@ body{
 } */
 
 .biljettbox{
-    background-color: rgb(121, 112, 179);
+    background-color: var(--complement-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +48,7 @@ body{
 
 .link{
     font-family: Exo;
-    background-color: rgb(200, 179, 201);
+    background-color: #dede65;
     border-radius: 1em;
     padding: 1em;
     text-align: center;

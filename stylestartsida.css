@@ -25,8 +25,8 @@ header{
     position: sticky;
     background-color: var(--complement-color);
     top: 0;
-    gap: 1em;
     padding: 1em;
+    z-index: 3;
 }
 
 nav{
@@ -120,11 +120,18 @@ nav{
     margin: 10px;
     min-width: 200px;
     width: 100vw;
-    height: 35vh;
+    height: 37vh;
     margin-bottom: 1em;
     border-radius: 1em;
     box-shadow: 2px 2px 2px;
     text-align: center;
+    z-index: 2;
+    transition: 0.5s all ease-in-out;
+}
+
+.blurb:hover {
+	transform: translateY(-20px);
+    box-shadow: 1px 5px 5px 1px;
 }
 
 .blurbcontent img{
@@ -138,6 +145,15 @@ nav{
 
 .blurb .blurbcontent img.cloudbild{
     object-position: 0 80%;
+}
+
+.blurbcontent > h3, .blurbcontent > p{
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.tellmesomething{
+    font-size: 16px;
 }
 
 .datum{
@@ -175,7 +191,7 @@ ul > li > h4{
 @media (min-width: 500px){
     .seminarier1 > .blurb, .seminarier2 > .blurb, .seminarier3 > .blurb{
         margin: 10px;
-        width: 40vw;
+        width: 45vw;
         height: 40vh;
     }
 }
@@ -218,11 +234,20 @@ ul > li > h4{
         font-size: 24px;
     }
 
+    .datum{
+        margin-bottom: 0.5em;
+    }
+
     .seminarier1 > .blurb, .seminarier2 > .blurb, .seminarier3 > .blurb{
         margin: 10px;
+        margin-top: 20px;
         min-width: 300px;
         width: 30vw;
         height: 35vh;
+    }
+
+    .tellmesomething{
+        font-size: 18px;
     }
 
 /* Har funderat på hur man ska göra för att ha 1/3 bildelement och 2/3 text i dessa individuella småblurbs.

@@ -7,7 +7,7 @@
 
 <body>
     <header>
-        <a href="indexstartsida.html" class="logo">Bättre Webb</a>
+        <a href="indexstartsida.html" class="logo">BetterWeb</a>
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -20,7 +20,6 @@
     <section id="tickets">
         <form class="ticketbox" action="inputaccepted.html">
             <div class="biljettprompt"><p>Please select which days you'd like to attend.</p></div>
-            <div>
             <div class="ticket-types">
                 <label for="day pass for 20/10">
                     <input type="checkbox" id="day pass for 20/10" name="ticket" value="20/10">
@@ -39,8 +38,7 @@
                     Full weekend pass
                 </label>
             </div>
-            </div>
-            <label for="Name">
+            <label for="Name" class="textstart">
                 Name:
                 <input type="text" id="Name" name="Name" placeholder="Sven" required>
             </label>
@@ -52,7 +50,7 @@
                 Address:
                 <input type="text" id="Address" name="Address" placeholder="Cyborgliden 13" required>
             </label>
-            <label for="E-mail">
+            <label class="textend" for="E-mail">
                 E-mail:
                 <input type="email" id="E-mail" name="E-mail" placeholder="s.svensson@outlook.com" required>
             </label>
@@ -74,7 +72,7 @@
             <label for="allergies" class="allergy-question"> Do you have any dietary requirements?
                 <textarea class="allergies" id="allergies" name="Report dietary requirements" placeholder="I would like to inform you that..." rows="4" cols="40"></textarea>
             </label>
-            <button class="submit" value="submit">Submit</button>
+            <button class="submit" value="submit">Register</button>
         </div>
     </section>
 </body>
