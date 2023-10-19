@@ -184,7 +184,12 @@ ul > li > h4{
 .footer-col > ul > li{
     color: var(--complement-color);
 }
-.footer-col > ul > a{
+
+.footer-col-social-media > ul > li{
+    display: inline;
+}
+
+.footer-col-social-media > ul > li > a{
     color: var(--complement-color);
 }
 
